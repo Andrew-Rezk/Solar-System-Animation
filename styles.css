@@ -1,0 +1,227 @@
+/*General stylings and font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    background: #000 url(/images/stars.png) repeat top center;
+    height: 0;
+}
+
+html, body{
+    height: 100%;
+}
+ 
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-bar, .top-bar ul {
+    background-color: #3b3b3b;
+    z-index: 3;
+    margin: -0.25em;
+}
+
+a{
+    color: rgb(150, 147, 147);
+}
+
+a:visited {
+    color: rgb(150, 147, 147);
+}
+
+a:hover {
+    color: white;
+}
+
+
+/*Animated objects*/
+@keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 1000px 1000px;}
+}
+
+@keyframes move-twinkle-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+@keyframes ufo {
+    0% {
+      left: 0;
+      transform: translateX(-100%)
+    }
+    100% {
+      left: 100%;
+      transform: translateX(1800%)
+    }
+  }
+
+.stars, .twinkling, .clouds{
+   position: absolute; 
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+
+.twinkling {
+    background: transparent url(/images/twinkling.png) repeat-x top center;
+    z-index: 1;
+    animation: move-twinkle-back 600s linear infinite;
+    background-repeat: repeat;
+    bottom: 0;
+    width: 1000%;
+    height: 6000px;
+}
+
+.clouds {
+    background: transparent url(/images/clouds.png) repeat top center;
+    z-index: 2;
+    opacity: .3;
+    animation: move-clouds-back 100s linear infinite;
+    overflow: auto;
+    width: 1000%;
+    height: 1000%;
+}
+
+ #ufo {
+    z-index: 4;
+    transform: scale(0.2);
+    width: 5rem;
+    animation: ufo 10s linear infinite;
+}
+
+#ufo2, #ufo3{
+    margin-top: 25rem;
+    transform: scale(0.2);
+    animation: ufo 10s linear infinite;
+}
+
+
+/*Cards*/
+.cell, .card{
+    z-index: 4;
+    margin-top: 50rem;
+    background:rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.card h3{
+    text-align: center;
+    transform: scale(1.3);
+}
+
+.card a{
+    text-decoration: underline;
+}
+
+.back-link{
+    text-align: center;
+}
+
+/*Planets*/
+.celest {
+    z-index: 3;
+    position: absolute;
+    transform: scale(0.5);
+    width: 50%;
+    margin: auto;
+    background: transparent url(/images/twinkling.png) repeat;
+    animation: move-twinkle-back 300s linear infinite;
+}
+
+.celest:hover {
+    cursor: pointer;
+    transform: scale(0.52);
+}
+
+#sun {
+    transform: scale(0.7);
+}
+
+#sun:hover {
+    transform: scale(0.72);
+}
+
+#sun-div {
+    width: 50%;
+    margin: auto; 
+}
+
+.merc-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 50rem;
+}
+
+#mercury {
+    animation: spin 4s linear infinite;
+}
+
+.ven-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 100rem;
+}
+
+.ear-div {
+    width: 60%;
+    margin: auto;
+    margin-top: 150rem;
+}
+
+.moon-div {
+    width: 10%;
+    margin: auto;
+    margin-top: 120rem;
+    animation: spin 8s linear infinite;
+}
+
+#moon {
+    transform: scale(0.3);
+}
+
+#moon:hover {
+    transform: scale(0.35);
+}
+
+.mars-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 200rem;
+}
+
+.jup-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 250rem;
+}
+
+.sat-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 300rem;
+}
+
+.ur-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 350rem;
+}
+
+.nep-div {
+    width: 50%;
+    margin: auto;
+    margin-top: 400rem;
+}
+
